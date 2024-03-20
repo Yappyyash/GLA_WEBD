@@ -1,4 +1,4 @@
-const mongoose=require("mongoose")
+const mongoose =require("mongoose")
 const {Schema}=mongoose
 
 const productSchema=new Schema({
@@ -18,13 +18,7 @@ const productSchema=new Schema({
     desc:{
         type:String,
         required:true
-    },
-    reviews:[
-        {
-            type:Schema.Types.ObjectId,
-            ref:"Review"
-        }
-    ]
+    }
 })
 
 const Product=mongoose.model("Product",productSchema)
